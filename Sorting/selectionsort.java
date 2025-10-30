@@ -1,7 +1,21 @@
-// SelectionSort implementation in Java
+/**
+ * Selection Sort Algorithm Implementation in Java
+ * 
+ * Time Complexity:
+ * - Best Case: O(n^2)
+ * - Average Case: O(n^2)
+ * - Worst Case: O(n^2)
+ * 
+ * Space Complexity: O(1) as it uses constant extra space
+ * 
+ * Selection Sort works by repeatedly finding the minimum element
+ * from the unsorted part and putting it at the beginning.
+ */
 public class SelectionSortExample {
 
-    // Function to perform Selection Sort
+    /**
+     * Sorts an array using Selection Sort algorithm
+     * @param arr The array to be sorted in ascending order
     public static void selectionSort(int[] arr) {
         int n = arr.length;
 

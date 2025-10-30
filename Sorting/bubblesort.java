@@ -1,8 +1,22 @@
 
-// BubbleSort implementation in Java
+/**
+ * Bubble Sort Algorithm Implementation in Java
+ * 
+ * Time Complexity:
+ * - Best Case: O(n) when array is already sorted
+ * - Average Case: O(n^2)
+ * - Worst Case: O(n^2) when array is reverse sorted
+ * 
+ * Space Complexity: O(1) as it uses constant extra space
+ * 
+ * Bubble Sort is the simplest sorting algorithm that works by repeatedly
+ * swapping adjacent elements if they are in the wrong order.
+ */
 public class BubbleSortExample {
 
-    // Function to perform Bubble Sort
+    /**
+     * Sorts an array using Bubble Sort algorithm
+     * @param arr The array to be sorted in ascending order
     public static void bubbleSort(int[] arr) {
         int n = arr.length;
         boolean swapped;
