@@ -1,5 +1,20 @@
+/**
+ * Insertion Sort Algorithm Implementation in Java
+ * 
+ * Time Complexity:
+ * - Best Case: O(n) when array is already sorted
+ * - Average Case: O(n^2)
+ * - Worst Case: O(n^2) when array is reverse sorted
+ * 
+ * Space Complexity: O(1) as it uses constant extra space
+ * 
+ * Insertion Sort builds the final sorted array one item at a time by repeatedly
+ * inserting a new element into the sorted part of the array.
+ */
 public class Insertionsort {
-	// Function to perform Insertion Sort
+    /**
+     * Sorts an array using Insertion Sort algorithm
+     * @param arr The array to be sorted in ascending order
 	public static void insertionSort(int[] arr) {
 		int n = arr.length;
 
