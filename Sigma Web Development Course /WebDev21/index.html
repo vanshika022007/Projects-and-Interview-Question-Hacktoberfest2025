@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity & Cascade</title>
+
+
+    <style>
+        /* h1 {
+            background-color: rgb(32, 231, 88);
+        }
+
+        p {
+            background-color: bisque;
+        } */
+
+        /* Important Keyword */
+        .yellow  {
+
+            background-color: yellow;
+        }
+
+        .cred {
+            background-color: red;
+        }
+
+        .cpink {
+            background-color: rgb(230, 136, 230);
+        }
+        /* specificity of in-line styles */
+        h2{
+            background-color: blue;
+        }
+        /* Attribute selector */
+
+        [data-x=a]{
+
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="yellow cred cpink">
+        <h1>CSS Specificity</h1>
+        <!-- If there are two rules that have selectors of identical specificity, the last one to be declared won. -->
+    </div>
+
+    <h2 style="background-color: chocolate;color: white;">Inline styles have the highest specificity</h2>
+
+    <!-- CSS specificity determines which style rules get applied to an element when there are conflicts. Higher specificity means the style will be used. It's calculated based on a point system involving inline styles, IDs, classes, and tag names.
+</body> -->
+<h3 data-x="a">!important flag > Inline > ID > Class/Attribute Selector >Element Selector>Universal Selector</h3>
+
+<h1>Specificity Calculation:</h1>
+<ol>
+    <li>Universal Selector: 0</li>
+    <li>Element selectors and pseudo-elements: 1</li>
+    <li>Class selectors, attribute selectors, and pseudo-classes: 10</li>
+    <li>ID selectors: 100</li>
+    <li>Inline styles: 1000</li>
+</ol>
+
+</html>

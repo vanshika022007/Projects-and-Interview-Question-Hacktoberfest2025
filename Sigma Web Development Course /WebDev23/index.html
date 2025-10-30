@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Property In CSS-Inline and Block element</title>
+    <style>
+      /* learning about display properties-flex , grid etc - learnt about visibility properties, converting block element in inline element  */
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .box {
+        border: 2px solid rgb(240, 92, 117);
+        display: inline-block;
+        padding: 30px;
+        margin: 40px;
+        width: 400px;
+        display: flex;
+        /* justify-content: center; */
+
+        /* display: none; */
+        /* display-inline property prevents width from having effect */
+        /* here margin and padding will not get applied from top until we make display property as inline block */
+        /* here we have changed div - block elemet in inline element */
+        /* inline element comes one after another */
+      }
+      /* .box1 {
+        display: none;
+        visibility: hidden;
+      } */
+      /* by visibility: hidden; box will disapper but the space remains same  */
+      h1 {
+        border: 2px solid greenyellow;
+        display: flex;
+        /* display: inline-flex; */
+        display: grid;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- div is a block element  -->
+    <div class="box box1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, at.
+    </div>
+    <span>Preserve nature and </span>
+    <span>it's Beauty!!</span>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, eaque?</h1>
+    <!-- span tag did not break out  -->
+  </body>
+</html>

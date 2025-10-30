@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Variables</title>
+    <style>
+      /* global variable */
+      :root {
+        /* --color: rgb(249, 180, 192); */
+        --seccolor: violet;
+        --black: black;
+        --useme: yellow;
+        --defpad:10px
+      }
+        * {
+          margin: 0;
+          padding: 0;
+        }
+        div:first-child {
+          /* background-color: rgb(210, 164, 253); */
+          background-color: var(--color);
+        }
+        .container {
+          /* background-color: rgb(155, 65, 239); */
+          padding: 20px;
+          background-color: var(--seccolor);
+        }
+        ul li {
+          list-style: none;
+          padding: 20px;
+        }
+        ul {
+          display: flex;
+        }
+      
+      ul li:first-child {
+        background-color: var(--color);
+        background-color: var(--color, yellow);
+      }
+      .exp {
+        /* local variable */
+        --color1: orange;
+        background-color: var(--color1);
+        /* orange has priority over root element colors :  */
+        padding: 10px;
+        margin: 200px;
+        border: 3px solid var(--black);
+        /* Variables can also be used to give border and outline , margins , opacity etc */
+        outline: 10px solid var(--useme);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contacts</li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae vel
+      maxime ratione eius eos eligendi harum impedit debitis, magnam voluptate
+      tempore suscipit iure incidunt adipisci nesciunt, commodi quibusdam
+      cupiditate! Laboriosam dolor doloribus eveniet impedit numquam accusantium
+      ex asperiores id saepe reprehenderit minima corrupti, tempora consequatur?
+    </div>
+    <div class="info">
+      Advantages of using var() are: makes the code easier to read (more
+      understandable) makes it much easier to change the color values
+    </div>
+
+    <div class="exp">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, quae
+      excepturi maiores quam vitae, omnis possimus voluptatem eaque quia
+      expedita, temporibus consequuntur voluptatum recusandae rerum ut sapiente
+      necessitatibus laboriosam optio provident facilis illum repellendus quas
+      voluptate ipsam! Magni nisi dolorem incidunt repellendus aperiam
+      distinctio? Facilis cupiditate debitis, quis animi quia tempora eius
+      explicabo quidem saepe ullam?
+    </div>
+  </body>
+</html>

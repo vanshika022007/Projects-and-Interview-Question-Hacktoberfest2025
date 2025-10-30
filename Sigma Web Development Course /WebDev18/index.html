@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts,Texts and Color Properties</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+
+        p {
+            font-family: monospace;
+            font-style: italic;
+            font-weight: lighter;
+            text-decoration: underline;
+
+        }
+
+        h1 {
+            font-family: cursive;
+            text-decoration: underline;
+            text-decoration-color: chartreuse;
+            text-decoration-style:double;
+
+        }
+
+        h2 {
+            font-family: Kablammo;
+            font-size: 20px;
+            line-height: 6;
+        }
+        h3{
+            letter-spacing: 5px;
+        }
+
+        h4{
+            text-transform: capitalize;
+            text-indent: 20px;
+            /* text-indent is used to give indent from side; */
+        }
+
+        h5{
+            text-transform: lowercase;
+            text-decoration: underline;
+            text-decoration-color: crimson;
+            text-decoration-style: dotted;
+            text-decoration-thickness:10px;
+            text-align: center;
+
+            /* text-decoration-thickness is used to bold the underline; */
+            /* text-decoration-color gives color to the underline; */
+        }
+
+        .lorem{
+
+            border: 2px solid blue;
+            width: 45px;
+            text-overflow: ellipsis;
+            /* overflow: hidden; */
+            word-break: break-all;
+
+            /* overflow: hidden; will hide the overflown text */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>
+            Today I am Learning Fonts!!
+        </h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod quisquam, aliquam ab ut blanditiis tempora
+            tempore reiciendis vero excepturi eius?</p>
+
+        <h2>This font is imported from google fonts!!</h2>
+
+        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, iure?</h3>
+        <h4>capatalise letters and words</h4>
+        <h5>Lowercase me by using text text-transform property</h5>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quis!</p>
+
+
+    </div>
+
+
+</body>
+
+</html>

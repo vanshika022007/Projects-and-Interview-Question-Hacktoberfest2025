@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studying CSS Overflow Property!!</title>
+    <style>
+      .box {
+        width: 30vw;
+        height: 40vh;
+        border: 2px solid yellow;
+        overflow: auto;
+        /* auto - Similar to scroll , but it adds scrollbars only when required. */
+        /* white-space: nowrap; */
+        /* white-space: nowrap; - text will not appear in next line */
+        /* text-overflow: ellipsis; */
+        /* Text-overflow: ellipsis 1 allows to at least have an indicator that text is missing. But there is no way to make the hidden text visible. In addition, text-overflow: ellipsis only works on one line text. That means that, to use this technique, you have to constrain the text to one line by using white-space: nowrap  */
+        overflow-y: hidden;
+        /* - if text-overflow is in y axis then hide it  */
+        overflow-x: auto;
+        /* - if text-overflow is in x axis then make it auto */
+
+        /* overflow: auto hidden; */
+        /* auto in x and hidden in y */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+      perferendis autem reprehenderit saepe magni. Explicabo consectetur eius
+      unde aliquam deserunt aliquid natus eos sit alias a, suscipit
+      voluptatibus, nostrum sequi sapiente sed, eaque magni aperiam! Itaque
+      harum distinctio assumenda, repellendus consequatur quod, commodi ipsa ad
+      officiis deleniti perspiciatis dolorem expedita beatae placeat, quis
+      sapiente amet laborum cumque omnis nisi ipsam accusamus rerum fuga!
+      Architecto, asperiores maxime! Adipisci, quia numquam ut perspiciatis ex
+      illum aliquid, quo sunt suscipit neque corrupti tenetur reiciendis ipsum
+      fugiat optio deleniti unde eaque in repudiandae repellendus cupiditate
+      temporibus modi quae illo. Quibusdam velit suscipit ipsa doloremque.
+    </div>
+  </body>
+</html>
