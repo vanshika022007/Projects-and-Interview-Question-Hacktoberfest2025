@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Transform</title>
+    <style>
+      .box {
+        height: 100px;
+        width: 100px;
+        background-color: palevioletred;
+        border: 2px solid black;
+        /* transform: rotate(0.4turn); */
+        /* transform: rotate(57deg); */
+        /* transform: rotateX(90deg); */
+        /* transform: rotateY(45deg); */
+        /* transform: rotateZ(35deg); */
+
+        /* transform: scale(2); */
+
+        /* this will increase the size of box by 2 times */
+
+        /* transform:scaleX(2);
+        transform: scaleY(3); */
+
+        /* transform: skew(5deg); */
+        /* The transform: skew() property in CSS distorts an element by slanting it along the X and/or Y axis. */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        width: 100vh;
+        height: 80vh;
+        border: 2px solid orange;
+      }
+      p {
+        border: 3px solid yellow;
+        text-align: justify;
+        font-size: 14px;
+        padding: 10px;
+        margin-top: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+      <p>
+        The transform: rotate() property in CSS is used to rotate an element
+        around a fixed point, typically the element's center, on a 2D plane.
+        Common units: deg (degrees), e.g., rotate(45deg) turn, e.g.,
+        rotate(0.5turn) rad (radians), e.g., rotate(1.57rad).
+      </p>
+    </div>
+  </body>
+</html>

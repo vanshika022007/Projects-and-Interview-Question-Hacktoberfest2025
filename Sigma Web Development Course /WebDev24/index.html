@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Shadows and Outlines</title>
+    <style>
+      .shadows {
+        box-shadow: 10px 10px 50px palevioletred;
+        border: 2px solid purple;
+      }
+      .text-element {
+        text-shadow: 2px 2px 4px #6bef7d;
+        text-transform: uppercase;
+        font-size: medium;
+        margin: 10px;
+        
+      }
+      .outline{
+
+        outline: 2px solid maroon;
+        /* outline is applied after border  */
+        border: 5px solid yellow;
+        margin: 10px;
+      }
+
+      p{
+
+        border: 2px solid orangered;
+        outline: 10px solid violet;
+        margin: 30px;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="shadows">CSS Shadows and Outlines</h1>
+
+    <div class="capture">
+      Hey,Today we will learn about CSS Shadows and Outlines,here are some key
+      points:
+    </div>
+    <ul class="list">
+      <li>
+        h-offset and v-offset: Determines the shadow's horizontal and vertical
+        position.
+      </li>
+      <li>blur: The larger the value, the blurrier the shadow.</li>
+      <li>spread: Expands or shrinks the shadow size.</li>
+      <li>color: Defines the shadow color.</li>
+      <li>inset: Makes the shadow inner.</li>
+
+      <div class="text-element">I am example of Text Shadows</div>
+      <div class="outline">I am example of outline !! - outline: width style color; </div>
+     
+        <p>An outline is a line that is drawn around elements, outside the borders, to make the element "stand out". It's commonly used for accessibility purposes, like highlighting focused elements.Borders can have rounded corners using border-radius, while outlines generally cannot.</p>
+    </ul>
+  </body>
+</html>

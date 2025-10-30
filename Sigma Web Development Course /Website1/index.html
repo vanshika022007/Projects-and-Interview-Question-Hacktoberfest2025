@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cozy Wrokspace</title>
+
+
+    <style>
+
+        .ytvdo{
+
+            margin: 60px;
+            
+        }
+
+        .ytvdo2{
+
+            margin: 60px;
+    
+        }
+    </style>
+</head>
+
+<style>
+    h1{
+        color: balck;
+        text-align: center;
+        padding: 40px;
+        
+
+    }
+       .class{
+
+        display: flex;
+       } 
+
+</style>
+<body>
+    <h1 class="cozy-heading">My Cozy Workspace</h1>
+
+<style>
+    .cozy-heading {
+        text-align: center;
+        font-family: 'Arial', sans-serif;
+        font-size: 28px;
+        color: #6b4226; /* Brownish color */
+        background-color: #f7d3d8; /* Pinkish background */
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+        max-width: 320px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+        /* border: 2px solid #a65a50; Pinkish-brown border */
+        background: linear-gradient(135deg, #fde2cc, #f7d3d8); /* Gradient effect */
+    }
+
+    /* Optional hover effect for extra pinkish tone */
+    .cozy-heading:hover {
+        background: linear-gradient(135deg, #f7d3d8, #fde2cc); /* Reverse gradient on hover */
+        color: #a65a50; /* Dark pinkish color on hover */
+    }
+</style>
+
+
+    <div class="stopwatch-container">
+        <div id="stopwatch">00:00:00</div>
+        <button class="start-btn" onclick="startStopwatch()">Start</button>
+        <button class="stop-btn" onclick="stopStopwatch()">Stop</button>
+        <button class="reset-btn" onclick="resetStopwatch()">Reset</button>
+    </div>
+    
+    <style>
+        /* Styling for the stopwatch with brownish-pinkish colors */
+        .stopwatch-container {
+            background-color: #fbeae1;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            max-width: 220px;
+            margin: 20px auto;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #d4a373;
+        }
+        
+        #stopwatch {
+            font-size: 22px;
+            color: #6b4226;
+            margin-bottom: 10px;
+            padding: 8px;
+            background-color: #fde2cc;
+            border-radius: 6px;
+            border: 1px solid #a65a50;
+        }
+    
+        button {
+            font-size: 13px;
+            padding: 6px 12px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        /* Button colors with brownish-pinkish theme */
+        .start-btn {
+            background-color: #d4a373;
+            color: white;
+        }
+    
+        .stop-btn {
+            background-color: #6b4226;
+            color: white;
+        }
+    
+        .reset-btn {
+            background-color: #a65a50;
+            color: white;
+        }
+    
+        button:hover {
+            background-color: #f7d3d8;
+            color: #333;
+        }
+    </style>
+    
+    <script>
+        let stopwatchInterval;
+        let elapsedTime = 0;
+        let running = false;
+    
+        function updateTime() {
+            elapsedTime += 1;
+            let hours = Math.floor(elapsedTime / 3600);
+            let minutes = Math.floor((elapsedTime % 3600) / 60);
+            let seconds = elapsedTime % 60;
+    
+            document.getElementById('stopwatch').textContent = 
+                (hours < 10 ? '0' + hours : hours) + ':' + 
+                (minutes < 10 ? '0' + minutes : minutes) + ':' + 
+                (seconds < 10 ? '0' + seconds : seconds);
+        }
+    
+        function startStopwatch() {
+            if (!running) {
+                stopwatchInterval = setInterval(updateTime, 1000);
+                running = true;
+            }
+        }
+    
+        function stopStopwatch() {
+            clearInterval(stopwatchInterval);
+            running = false;
+        }
+    
+        function resetStopwatch() {
+            clearInterval(stopwatchInterval);
+            elapsedTime = 0;
+            running = false;
+            document.getElementById('stopwatch').textContent = '00:00:00';
+        }
+    </script>
+
+    <div class="ytvdo">
+
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/D4VpVRtbx7w?si=mgP5kHtr6mf2P1c3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="ytvdo2">
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/e3sobyHWa0I?si=pSh6eZeIUoaH2iF6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    
+
+</body>
+</html>

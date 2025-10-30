@@ -1,0 +1,76 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #F4EAF5; /* Soft Lavender */
+    color: #1A1A1A; /* Deep Black */
+  }
+  
+  header {
+    background-color: #1A1A1A; /* Deep Black */
+    color: #FAFAFA; /* Soft Off-White */
+    text-align: center;
+    padding: 2em 0;
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    color: #FF5DA2; /* Bright Fuchsia Pink */
+  }
+  
+  header p {
+    font-size: 1.2em;
+    color: #A3E4C2; /* Light Mint Green */
+  }
+  
+  section {
+    padding: 2em;
+    margin: 1em auto;
+    width: 80%;
+    background-color: #FFFFFF; /* Pure White */
+    border-left: 8px solid #FF5DA2; /* Bright Fuchsia Pink */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #3D2859; /* Dark Purple */
+    margin-bottom: 0.5em;
+    font-size: 1.8em;
+  }
+  
+  p, ul li {
+    font-size: 1em;
+    line-height: 1.6em;
+  }
+  
+  ul {
+    list-style-type: square;
+    padding-left: 1.2em;
+  }
+  
+  ul li {
+    color: #A3E4C2; /* Light Mint Green */
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #3D2859; /* Dark Purple */
+    color: #FAFAFA; /* Soft Off-White */
+  }
+  
+  footer p {
+    font-size: 1em;
+  }
+  
+  a {
+    color: #FF5DA2; /* Bright Fuchsia Pink */
+    text-decoration: none;
+  }
+  

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>CSS selectors</title>
+    <style>
+        /* Element slector */
+
+        div{
+            background-color: chocolate;
+        }
+
+        /* class selector */
+        .divcolor{
+
+            background-color: rgb(234, 177, 188);
+        }
+
+        /* id selector */
+
+        #div11{
+
+            background-color: rgb(30, 149, 149);
+        }
+
+        /* child selector */
+
+        div > p {
+
+            color: white;
+            background-color: blue;
+        }
+        /* <!-- Descendant selector --> */
+        div p { 
+
+            background-color: rgb(149, 42, 165);
+            color: aliceblue;
+        }
+
+        /* universal selector */
+
+        *{
+            border-radius: 10px;
+            border: 1px dotted rgb(0, 0, 0);
+            margin: 0;
+        }
+
+        /* Pseudo selector */
+        a:visited{
+
+            color:rgb(214, 214, 9);
+        }
+
+        a:link{
+
+            color: rgb(0, 0, 0);
+        }
+        a:active{
+
+            background-color: white;
+        }
+
+        div:hover{
+
+            background-color: pink;
+        }
+        .square{
+
+            height: 100px;
+            width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        I am div 1
+    </div>
+
+    <div>
+        I am div 2 
+    </div>
+
+    <div class="divcolor">
+        I am div 3
+    </div>
+
+    <div id="div11">
+        I am div 4 
+    </div>
+
+
+    <div>
+        <p>I am a para inside div , and i am styled by child selector</p>
+    </div>
+
+
+    <div>
+
+        <main>
+            <p>
+                I am para inside div , but not directly in div tag, i am styled by Descendant selector!!
+            </p>
+        </main>
+    </div>
+
+
+    <div>
+        <a href="https://www.google.com">Open Google</a>
+        <a href="https://www.facebook.com">Open FB</a>
+        
+    </div>
+
+    <div class="square"></div>
+</body>
+</html>

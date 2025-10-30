@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+
+        .boxes *{
+            color:blueviolet;
+            border: 2px solid purple;
+        }
+
+        /* .boxes:first-child{
+            background-color: pink;
+        } */
+
+        .box2::first-line{
+            background-color:yellow;
+        }
+
+        .box2::first-letter{
+
+            font-size: 60px;
+        }
+
+
+        /* below one is known as attribute selector */
+        [data-color="primary"]{
+
+            background-color:black;
+            
+        }
+        
+        .boxes:nth-last-child(2){
+
+            color: red;
+        }
+        .box2::before{
+            content: vanshika;
+        }
+
+        .box4::after{
+            content:hey ;
+            font-size: 60px;
+        }
+
+        /* this property will color the selected text as yellow */
+        ::selection{
+            background-color: rgb(110, 110, 255);
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box1"><span>Watch me</span></div>
+        <div class="box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus porro animi voluptates aliquam consequatur adipisci! Dolor non fugiat voluptatibus deleniti distinctio fuga magnam aut neque? Nisi, amet quos obcaecati suscipit aut odit, dignissimos quasi eligendi maxime earum asperiore</div>
+        <div data-color="primary" class="box3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et facilis corrupti earum amet, consequatur nam assumenda obcaecati nulla totam, magni quos quasi sunt ducimus doloribus architecto saepe laborum? Quasi totam deleniti sequi dolore quos similique quod, corrupti iusto dolor tempora excepturi? Corrupti consequatur impedit consectetur.</div>
+        <div class="box4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt laborum ratione eos, amet perspiciatis asperiores quasi? Porro impedit nemo praesentium.</div>
+        <div class="box5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos cum, repellendus deserunt esse ratione repellat, veniam exercitationem itaque, quidem quibusdam harum. Quos quam dicta placeat, harum quisquam fuga cumque quis.</div>
+        <div class="box6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores sapiente fugit quasi, adipisci voluptas aperiam optio? Provident ut nulla ratione adipisci rerum exercitationem nihil, ad at, vero quae odit cupiditate?</div>
+        <div class="box7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, quod? Harum saepe cupiditate consequatur atque. Facere error modi architecto cupiditate totam recusandae. Expedita, ex.</div>
+    </div>
+</body>
+</html>

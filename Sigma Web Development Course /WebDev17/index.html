@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box model</title>
+
+    <style>
+
+        *{
+            margin: 0%;
+            padding: 0;
+        }
+        .box{
+            background-color: rgb(245, 151, 151);
+        }
+
+        .box1{
+
+            border: 2px dotted purple;
+            padding: 10px;
+            margin: 30px;
+            height: 100px;
+        }
+
+        .box2{
+
+            border: 2px solid rgb(128, 32, 0);
+            padding: 10px;
+            margin: 30px;
+            height: 100px;
+        
+        }
+
+        /* box1 and box2 here shows margin collapse concept */
+
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        Hey , Let's 
+        learn box model in CSS
+        </div>
+    <div class="box box2">I am a box</div>
+</body>
+</html>

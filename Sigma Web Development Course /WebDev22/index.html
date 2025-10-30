@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Units</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html{
+        font-size: 10px;
+        
+        
+      }
+
+      .box {
+        box-sizing: border-box;
+        /* width:3024px; */
+        width: 50vw;
+        /* vw - Relative to 1% of the width of the viewport. (Viewport is the area of the website visible to the user.) */
+        margin: auto;
+        border: 2px solid magenta;
+        background-color: #E6E6FA;
+        font-size: medium;
+      }
+      .container {
+        box-sizing: border-box;
+        /* width:3024px; */
+        width: 50vw;
+        /* height: 80vh; */
+        /* vh -  Relative to 1% of the height of the viewport */
+        margin: 32px auto;
+        /* here 32px is from top bottom and auto is from left right */
+        border: 2px solid magenta;
+        background-color: #E6E6FA;
+        /* font-size: 8px; */
+        min-height: 100vh;
+        /* by min height the container will adjust it;s height , do loremm1000 to see the effect  */
+        
+      }
+      .container p{
+
+        font-size: 2em;
+        
+        /* em - Relative to the font size of the parent element. Eg: 5em means the size would be 5 times the current font size. */
+      }
+
+      .mycont{
+
+        font-size: 20px;
+        background-color: rgb(101, 236, 110);
+        width: 100vmin;
+        margin: auto;
+        border: 2px solid black ;
+        margin: 32px auto;
+        /* Vmin is equal to the smaller of vw or vh, and vmax is equal to the larger of vw or vh. */
+      }
+
+    
+    </style>
+  </head>
+  <body>
+    <div class="box">I am a box</div>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate delectus eveniet architecto corrupti, sunt aspernatur animi minus pariatur aliquam iure!</p>
+    </div>
+
+    <div class="mycont">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, dolorem!</div>
+  </body>
+</html>
+
+<!-- vmin of my pc is height while vmin of my mobile is width
+vmax of pc - width 
+vmax of mobile - height  -->

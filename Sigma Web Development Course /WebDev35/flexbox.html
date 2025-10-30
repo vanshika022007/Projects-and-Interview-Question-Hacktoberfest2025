@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Box</title>
+    <style>
+      .container {
+        background-color: pink;
+        height: 900px;
+        width: 180vh;
+        border: 3px solid black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        align-items: end;
+       
+
+        /* The CSS property justify-content: space-around; is used in Flexbox or Grid layouts to distribute child elements along the main axis with equal space around each element.  */
+        
+      }
+
+      .box {
+        background-color: black;
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        margin: 10px;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

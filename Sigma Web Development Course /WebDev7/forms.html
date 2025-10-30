@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms in HTML</title>
+    <link rel="stylesheet" href="forms.css" />
+  </head>
+  <body>
+    <form action="">
+      <!-- Textual data -->
+      <!-- by giving id - the input box will automatically gets focused  -->
+      <div class="textual">
+        <label for="fullname">Your name:</label>
+        <input placeholder="Enter Your Name" id="fullname" required/>
+        <label for="email">E-mail:</label>
+        <input placeholder="Enter Your Email" id="email" />
+        <label for="mob">Mobile no:</label>
+        <input placeholder="Mobile no." id="mob" />
+      </div>
+
+      <!-- Numerical data -->
+      <div class="numerical">
+        <label for="age">Enter Your Age:</label>
+        <input placeholder="Age" id="age" type="number" />
+      </div>
+
+      <div style="box-shadow: 10px 8px 20px gold; padding: 4px; margin: 20px">
+        <span>Are you single?</span>
+        <input type="radio" id="radio1" />
+        <label>No</label>
+        <input type="radio" />
+        <label>Yes</label>
+        
+      </div>
+      <div style="margin: 50px; padding: 5px">
+        <span>Select City:</span>
+        <label for="c">Mumbai</label>
+        <input type="checkbox" id="c" />
+
+        <label for="c">Delhi</label>
+        <input type="checkbox" id="d" />
+
+        <label for="c">Pune</label>
+        <input type="checkbox" id="p" />
+        
+      </div>
+
+      <div style="margin: 60px">
+        <label for="date">Select Date:</label>
+        <input type="date" />
+      </div>
+
+      <div style="padding: 5px; margin: 30px">
+        <label for="time">Time:</label>
+        <input type="time" />
+      </div>
+
+      <div class="pass">
+        <label for="">Password</label>
+        <input type="Password" placeholder="Enter Your Password" />
+      </div>
+
+      <div class="file" style="padding: 5px; margin: 50px">
+        <label for="">Upload Pics</label>
+        <input type="file" />
+      </div>
+
+      <div>
+        <label for="">Email Section</label>
+        <input type="email" required />
+      </div>
+
+      <div class="button" >
+        <button style="padding: 20px; margin: 50px">Submit</button>
+        <button style="padding: 20px; margin: 50px">Finish</button>
+      </div>
+
+      <div>
+        <label for="color">Color:</label>
+        <input type="color" id="color">
+        </div>
+
+        <!-- Select -->
+
+        <div class="dropdown">
+            <select name="" id="">
+                <option value="">Japan</option>
+                <option value="">Korea</option>
+                <option value="">US</option>
+                <option value="">UK</option>
+                <option value="">xx</option>
+
+
+            </select>
+        </div>
+    </form>
+  </body>
+</html>
+
+
