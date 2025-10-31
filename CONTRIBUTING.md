@@ -10,7 +10,7 @@ Thank you for your interest in contributing to this repository! This guide will 
 - [Contribution Guidelines](#-contribution-guidelines)
 - [Project Structure](#-project-structure)
 - [Coding Standards](#-coding-standards)
-- [Pull Request Process](#pull-request-template)
+- [Pull Request Template](#pull-request-template)
 - [Issue Guidelines](#-issue-guidelines)
 - [Recognition](#-recognition)
 
