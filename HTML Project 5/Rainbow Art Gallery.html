@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rainbow Art Gallery 🎨</title>
+  <!--
+    Rainbow Art Gallery
+    A single-file HTML project showcasing colorful generative art patterns
+    (inspired by Python turtle sketches). Includes a carousel, code viewer,
+    download & copy-to-clipboard functionality.
+
+    Author: Vanshika Yadav
+    Notes: This is a front-end showcase. Original Turtle (Python) code is
+    included in the "View Code" panel for each artwork and can be downloaded.
+  -->
+
+  <style>
+    /* -------------------- BASIC RESET -------------------- */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg, #0f172a 0%, #021124 60%);
+      color: #e6eef8;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.5;
+    }
+
+    /* -------------------- LAYOUT -------------------- */
+    header {
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .brand {
+      display: flex; gap: 14px; align-items: center;
+    }
+    .logo {
+      width: 44px; height: 44px; border-radius: 8px;
+      background: linear-gradient(135deg, #ff7aa2, #6ad3ff);
+      display: grid; place-items: center; font-weight: 700; color: #021124;
+      box-shadow: 0 6px 20px rgba(10,20,40,0.6);
+    }
+    h1 { font-size: 1.1rem; letter-spacing: 0.4px; }
+    p.lead { color: #bcd4ee; font-size: 0.9rem; }
+
+    /* -------------------- HERO -------------------- */
+    .hero {
+      padding: 48px 20px; display: grid; place-items: center; text-align: center;
+    }
+    .hero .title { font-size: 2rem; margin-bottom: 8px; color: #fff; }
+    .hero .subtitle { color: #cfe6ff; max-width: 720px; }
+
+    /* -------------------- CAROUSEL -------------------- */
+    .carousel-wrap { width: 100%; max-width: 980px; margin: 28px auto; }
+    .carousel { position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 20px 50px rgba(2,6,23,0.7); }
+    .slides { display: flex; transition: transform 600ms cubic-bezier(.2,.9,.2,1); }
+    .slide { min-width: 100%; display:flex; align-items:center; justify-content:center; padding: 36px; gap:24px; }
+
+    /* each art panel */
+    .art { width: 60%; min-width: 360px; height: 360px; border-radius: 8px; overflow: hidden; display: grid; place-items: center; background: #041427; }
+
+    /* info panel */
+    .info { width: 40%; min-width: 280px; padding: 24px; display:flex; flex-direction:column; gap:12px; color:#d9ecff; }
+    .info h3 { margin-bottom:6px; }
+    .controls { display:flex; gap:8px; margin-top:8px; }
+    .btn { background: linear-gradient(90deg,#6ad3ff,#a06bff); color:#021124; padding:8px 12px; border-radius:8px; border:none; cursor:pointer; font-weight:600; }
+    .btn.secondary { background: transparent; border:1px solid rgba(255,255,255,0.06); color:#d9ecff; }
+
+    /* -------------------- ART SIMULATIONS (pure CSS/SVG animations) -------------------- */
+    /* We'll simulate some generative-looking animations using SVG */
+    svg { width: 100%; height:100%; display:block; }
+
+    /* -------------------- CODE PANEL -------------------- */
+    .code-panel { margin:28px auto; max-width:980px; padding:18px; border-radius:10px; background: rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.03); }
+    pre { background: rgba(2,8,20,0.6); padding:12px; border-radius:8px; overflow:auto; color:#d2f1ff; font-size:13px; }
+
+    /* -------------------- FOOTER -------------------- */
+    footer { text-align:center; padding:22px 12px; color:#9fcfff; font-size:0.9rem; }
+
+    /* -------------------- RESPONSIVE -------------------- */
+    @media (max-width: 900px) {
+      .slide { flex-direction: column; }
+      .art { width: 100%; height: 300px; }
+      .info { width: 100%; }
+      .carousel-wrap { padding: 0 14px; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="logo">RA</div>
+      <div>
+        <h1>Rainbow Art Gallery</h1>
+        <p class="lead">Generative sketches & patterns — inspired by turtle graphics</p>
+      </div>
+    </div>
+    <div style="display:flex;gap:12px;align-items:center">
+      <button id="prev" class="btn secondary">Prev</button>
+      <button id="next" class="btn">Next</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="title">A small showcase of code-driven art</div>
+      <div class="subtitle">Click through artworks, view their Python turtle source, copy or download the code, and enjoy animated previews generated with lightweight SVG.</div>
+    </section>
+
+    <section class="carousel-wrap">
+      <div class="carousel" id="carousel">
+        <div class="slides" id="slides">
+
+          <!-- Slide 1: Colorful Flower Simulation -->
+          <div class="slide">
+            <div class="art" aria-hidden="false">
+              <!-- SVG animated radial petals -->
+              <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
+                <defs>
+                  <radialGradient id="g1" cx="50%" cy="50%">
+                    <stop offset="0%" stop-color="#fff" stop-opacity="0.0" />
+                    <stop offset="60%" stop-color="#ff7aa2" stop-opacity="0.7" />
+                    <stop offset="100%" stop-color="#6ad3ff" stop-opacity="1" />
+                  </radialGradient>
+                </defs>
+                <g transform="translate(200,200)">
+                  <!-- petals created by rotating paths -->
+                  <g id="petals1">
+                    <!-- create 12 petals with animation via CSS keyframes using SMIL fallback -->
+                    <g>
+                      <path d="M0,0 C60,-20 120,-20 140,0 C120,20 60,20 0,0Z" fill="url(#g1)">
+                        <animateTransform attributeName="transform" type="rotate" dur="8s" repeatCount="indefinite" from="0" to="360" />
+                      </path>
+                    </g>
+                    <!-- copy rotated petals -->
+                    <use href="#" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+
+            <div class="info">
+              <h3>Colorful Flower</h3>
+              <p>Soft radial petals with hue transitions — inspired by nested circle loops and HSV color cycling.</p>
+
+              <div class="controls">
+                <button class="btn" data-download="flower">Download Code</button>
+                <button class="btn secondary" data-copy="flower">Copy Code</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Spiral Heart Simulation -->
+          <div class="slide">
+            <div class="art">
+              <!-- animated spiral of hearts (SVG) -->
+              <svg viewBox="0 0 400 400">
+                <g transform="translate(200,200)">
+                  <g id="spiral">
+                    <!-- generate multiple hearts using JS later or CSS animation -->
+                    <g>
+                      <path id="heart" d="M0 -12 C -10 -28 -40 -28 -40 -4 C -40 12 -20 30 0 44 C 20 30 40 12 40 -4 C 40 -28 10 -28 0 -12 Z" fill="#ff9eb8" opacity="0.9">
+                        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite" />
+                      </path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+
+            <div class="info">
+              <h3>Spiral Heart</h3>
+              <p>A rotating heart motif arranged in a spiral — reminiscent of stroke-based filled loops.</p>
+
+              <div class="controls">
+                <button class="btn" data-download="heart">Download Code</button>
+                <button class="btn secondary" data-copy="heart">Copy Code</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Neon Infinity Loop Simulation -->
+          <div class="slide">
+            <div class="art">
+              <svg viewBox="0 0 400 400">
+                <g transform="translate(200,200)">
+                  <path d="M -120 0 C -120 -80 120 -80 120 0 C 120 80 -120 80 -120 0 Z" fill="none" stroke="#89fffb" stroke-width="6" stroke-linecap="round">
+                    <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite" />
+                    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="12s" repeatCount="indefinite" />
+                  </path>
+                </g>
+              </svg>
+            </div>
+
+            <div class="info">
+              <h3>Neon Infinity</h3>
+              <p>Looped infinity shape with neon glow and rotating motion — inspired by curve raster loops.</p>
+
+              <div class="controls">
+                <button class="btn" data-download="infinity">Download Code</button>
+                <button class="btn secondary" data-copy="infinity">Copy Code</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CODE PANEL: shows python turtle code for chosen art -->
+    <section class="code-panel" id="codePanel">
+      <h3>Artwork Source Code (Python - Turtle)</h3>
+      <p style="color:#bcd4ee;">View or download the Python turtle script used to generate the artwork. (Click the buttons in the carousel to copy/download the exact snippet.)</p>
+
+      <pre id="codeBlock"># Select an artwork to view its source code</pre>
+    </section>
+
+  </main>
+
+  <footer>
+    Made with ❤️ by Vanshika — Generative art inspired by Turtle graphics
+  </footer>
+
+  <script>
+    // -------------------- Simple Carousel Logic --------------------
+    const slides = document.getElementById('slides');
+    const total = slides.children.length;
+    let current = 0;
+
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+
+    function show(index) {
+      if (index < 0) index = total - 1;
+      if (index >= total) index = 0;
+      current = index;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    prev.addEventListener('click', () => show(current - 1));
+    next.addEventListener('click', () => show(current + 1));
+
+    // Auto-advance every 6 seconds
+    setInterval(() => show(current + 1), 6000);
+
+    // -------------------- Code snippets for each art --------------------
+    const codes = {
+      flower: `# Colorful Flower Pattern\nfrom turtle import *\nimport colorsys\n\nbgcolor(\"black\")\nspeed(0)\n h = 0\n for i in range(36):\n     for j in range(6):\n         c = colorsys.hsv_to_rgb(h, 0.6, 1)\n         color(c)\n         h += 0.005\n         circle(60)\n         left(60)\n     right(10)\ndone()` ,
+
+      heart: `# Spiral Heart\nfrom turtle import *\nimport colorsys\n\nbgcolor(\"black\")\ntracer(10)\n pensize(2)\n h = 0\n for i in range(200):\n     c = colorsys.hsv_to_rgb(h, 1, 1)\n     color(c)\n     h += 0.005\n     begin_fill()\n     circle(100, 60)\n     left(120)\n     circle(100, 60)\n     end_fill()\n     left(5)\ndone()` ,
+
+      infinity: `# Neon Infinity Loops\nfrom turtle import *\nimport colorsys\n\nbgcolor(\"black\")\nspeed(0)\n pensize(2)\n h = 0\n for i in range(100):\n     c = colorsys.hsv_to_rgb(h, 1, 1)\n     color(c)\n     h += 0.01\n     circle(i, 180)\n     left(45)\ndone()`
+    };
+
+    // Wire up copy & download buttons
+    document.querySelectorAll('[data-copy]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const key = e.currentTarget.dataset.copy;
+        navigator.clipboard.writeText(codes[key]).then(() => {
+          const orig = e.currentTarget.textContent;
+          e.currentTarget.textContent = 'Copied ✓';
+          setTimeout(() => e.currentTarget.textContent = orig, 1200);
+          // also show code in panel
+          document.getElementById('codeBlock').textContent = codes[key];
+        });
+      });
+    });
+
+    document.querySelectorAll('[data-download]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const key = e.currentTarget.dataset.download;
+        const blob = new Blob([codes[key]], {type: 'text/plain;charset=utf-8'});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = key + '_turtle.py';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+      });
+    });
+
+    // Show initial code for first art
+    document.getElementById('codeBlock').textContent = codes.flower;
+
+  </script>
+</body>
+</html>
