@@ -4,15 +4,15 @@ Thank you for your interest in contributing to this repository! This guide will 
 
 ## 📋 Table of Contents
 
-- [Code of Conduct](#code-of-conduct)
-- [Getting Started](#getting-started)
+- [Code of Conduct](#-code-of-conduct)
+- [Getting Started](#-getting-started)
 - [How to Contribute](#how-to-contribute)
-- [Contribution Guidelines](#contribution-guidelines)
-- [Project Structure](#project-structure)
-- [Coding Standards](#coding-standards)
-- [Pull Request Process](#pull-request-process)
-- [Issue Guidelines](#issue-guidelines)
-- [Recognition](#recognition)
+- [Contribution Guidelines](#-contribution-guidelines)
+- [Project Structure](#-project-structure)
+- [Coding Standards](#-coding-standards)
+- [Pull Request Process](#-pull-request-process)
+- [Issue Guidelines](#-issue-guidelines)
+- [Recognition](#-recognition)
 
 ## 📜 Code of Conduct
 
