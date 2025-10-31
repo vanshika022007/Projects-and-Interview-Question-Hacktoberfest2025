@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 52, "column": 0}, "map": {"version":3,"sources":["file:///Users/vanshikayadav/Documents/Generative%20AI/my-app/app/api/chat/route.ts"],"sourcesContent":["import { openai } from \"@ai-sdk/openai\";\nimport { streamText } from \"ai\";\n\nexport const maxDuration = 30;\n\nexport async function POST(req: Request) {\n  const { messages } = await req.json();\n  const result = streamText({\n    model: openai(\"gpt-4o-mini\"),\n    messages,\n  });\n  return result.toDataStreamResponse();\n}"],"names":[],"mappings":";;;;AAAA;AACA;;;AAEO,MAAM,cAAc;AAEpB,eAAe,KAAK,GAAY;IACrC,MAAM,EAAE,QAAQ,EAAE,GAAG,MAAM,IAAI,IAAI;IACnC,MAAM,SAAS,CAAA,GAAA,sJAAA,CAAA,aAAU,AAAD,EAAE;QACxB,OAAO,CAAA,GAAA,yJAAA,CAAA,SAAM,AAAD,EAAE;QACd;IACF;IACA,OAAO,OAAO,oBAAoB;AACpC","debugId":null}}]
+}

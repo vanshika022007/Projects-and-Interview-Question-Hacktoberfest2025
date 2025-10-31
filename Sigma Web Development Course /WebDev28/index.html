@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Position Property</title>
+    <style>
+      /* * {
+        margin: 0;
+        padding: 0;
+      } */
+
+      .box {
+        border: 2px solid black;
+        height: 133px;
+        width: 80vw;
+        padding: 3px;
+        margin: 3px;
+      }
+      .box1 {
+        position: absolute;
+        /* here absolute position is relative to the <html lang="en"> */
+        top: 0px;
+        left: 0px;
+        /* top specify position from top side , and similarly left and right do the same */
+        background-color: pink;
+      }
+      .box2 {
+        background-color: yellow;
+        position: relative;
+        top: -50px;
+        left: 40px;
+        z-index: 1;
+        /* z-index: 1; value set the pink box above yellow one along with position: relative; property */
+        /* it is important to apply position while assigning the z-index value */
+        /* sometimes we use position static also to reset the position value */
+      }
+      .box3 {
+        background-color: peachpuff;
+      }
+      .box4 {
+        background-color: cornflowerblue;
+      }
+      .parent {
+        padding: 20px;
+        margin: 34px;
+        border: 2px solid purple;
+        border-width: 10px;
+        position:absolute;
+        /* in case parent has absolute position then the absolute position property gets applied relative to thr parent */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Position Property</h1>
+    <p>
+      The CSS positions allow you to precisely control the placement of an
+      element on the web page.
+    </p>
+    <ul>
+      <li>Static Position</li>
+      <p>
+        *The elements are positioned according to the normal flow of the
+        document.
+      </p>
+      <li>Relative position</li>
+      <p>
+        *Elements are positioned relative to the normal position in the
+        document. You can use the top, right, bottom, and left properties to
+        move the element from its original position.
+      </p>
+      <h4>Z-index</h4>
+      <p>
+        z-index is a CSS property used to control the vertical stacking order of
+        elements that overlap one another. It only works on elements that have a
+        position value of relative, absolute, fixed, or sticky. By default,
+        elements are stacked in the order they appear in the HTML code, with
+        later elements appearing on top of earlier ones.
+      </p>
+      <li>Absolute Position</li>
+      <p>
+        An element with position: absolute; is positioned relative to the
+        nearest positioned ancestor (instead of positioned relative to the
+        viewport, like fixed).
+      </p>
+      <li>Fixed Position</li>
+      <li>Sticky Position</li>
+    </ul>
+    <div class="parent">
+      <div class="box box1"></div>
+      <div class="box box2"></div>
+      <div class="box box3"></div>
+      <div class="box box4"></div>
+    </div>
+  </body>
+</html>

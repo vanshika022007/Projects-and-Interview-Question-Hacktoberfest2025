@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Media queries</title>
+    <style>
+      /* media query syntax */
+      /* @media not|only mediatype and (media feature) and (media feature) {
+        CSS-Code;
+        } */
+      body {
+        background-color: rgb(35, 85, 177);
+      }
+      @media only screen and (max-width: 455px) {
+        body {
+          background-color: rgb(183, 151, 255);
+        }
+      }
+      .box1 {
+        width: 344px;
+        height: 344px;
+        background-color: aqua;
+        padding: 10px;
+        margin: 200px;
+      }
+      .boxes {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">HEY HOW ARE YOU !!</div>
+    <div class="boxes box1"></div>
+    <div class="boxes box1"></div>
+  </body>
+</html>

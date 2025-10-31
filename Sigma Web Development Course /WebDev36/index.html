@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid</title>
+
+    <style>
+      /* CSS Grid is a two-dimensional layout system in CSS that allows the creation of web layouts with rows and columns. */
+      .container {
+        border: 2px solid black;
+        display: grid;
+        /* grid-template-columns: 100px 100px 200px 100px; */
+         /* - why gap in btw */
+        /* grid-template-columns: 100px 100px 100px 10px 100px ; */
+         /* - why overlapping ?  */
+        /* grid-template-columns: 200px 300px ; - gap? */
+        /* grid-template-columns: 2px 3px 4px 5px; - ho kya rha h ye */
+        /* grid-template-columns: 100px 100px 100px; */
+
+        /* 100 and 200 in last is not making any difference-how?? */
+        /* grid-template-columns: 120px 100px 200px;
+        grid-template-rows: 100px 100px 100px; */
+      }
+      .item {
+        border: 2px solid blueviolet;
+        height: 90px;
+        width: 90px;
+        background-color: black;
+        margin: 3px;
+        border-radius: 5px;
+      }
+      .item4 {
+        grid-row: 1/2;
+        background-color: yellow;
+        grid-column: 1/2;
+      }
+      .item1 {
+        /* grid-row: 1/3; */
+        /* 1/3 will take place from 1 to 3 - put another values and notice the difference */
+        /* background-color: red; */
+        /* grid-column: 1/3; */
+        /* one similar method to write  grid-column: 1/3; is writeen below */
+        /* grid-column-start: 1;
+        grid-column-end: 3; */
+
+        box-shadow: 2px 3px 4px grey;
+        /* naming grid lines  */
+        grid-template-columns: [first] 100px [sec] 100px [thd] 200px;
+        grid-column: first/sec;
+
+      }
+
+      /* we can notice overlapping in item1 and item4 - this is done by the help of grid*/
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">1</div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item item4">4</div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+  </body>
+</html>

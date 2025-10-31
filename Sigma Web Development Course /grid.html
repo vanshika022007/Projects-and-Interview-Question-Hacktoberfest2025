@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GRID</title>
+    <style>
+      body {
+        background-color: lavenderblush;
+      }
+
+      .container {
+        height: 700px;
+        width: 700px;
+        border: 2px solid black;
+        /* background-color: palegreen; */
+        display: grid;
+        width: 600px;
+        grid-template-columns:100px 200px 300px;
+        grid-template-rows: 200px 200px 200px;
+        /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+        /* grid-template-columns: 3fr 5fr 7fr 9fr 2fr; */
+        /* grid-template-rows: auto 100px; */
+        /* grid-template-rows: 2fr 4fr 5fr 6fr 9fr; */
+        grid-template-columns: repeat(5 , 1fr);
+        grid-template-rows: repeat(4,1fr);
+      }
+      .child {
+        background-color:palevioletred;
+        box-shadow: 3px 4px 4px grey;
+        margin: 10px;
+      }
+      .child1 {
+        background-color:bisque;
+        box-shadow: 3px 4px 4px grey;
+        margin: 10px;
+      }
+      .child2{
+        background-color:violet;
+        box-shadow: 3px 4px 4px grey;
+        margin: 10px;
+        grid-row-start: 2;
+        grid-column-start: 3;
+      }
+      .child2{
+        background-color:black;
+        box-shadow: 3px 4px 4px grey;
+        margin: 10px;
+        grid-row-start: 3;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Learning CSS Grid</h1>
+    <p>
+      The CSS Grid Layout is a two-dimensional system, meaning you can control
+      both rows and columns simultaneously. It’s used to create a grid container
+      and align child elements within it.
+    </p>
+    <p>
+      Use grid-template-rows and grid-template-columns to define the number of
+      rows and columns and their sizes.
+    </p>
+    <p>The gap property defines space between rows and columns.</p>
+    <!-- display grid has default value as 1 in columns, we can stick a column but not a row -->
+    <!-- by default value of column is 1  -->
+    <div class="container">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child1"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child2"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child3"></div>
+    </div>
+  </body>
+</html>

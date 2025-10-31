@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=video, initial-scale=1.0">
+    <title>Video , audio and Media</title>
+</head>
+
+<body>
+    <video src="gojo.mp4" height="600px" controls muted poster="bubududu.jpeg"></video>
+    <video src="https://youtu.be/RlPNh_PBZb4?si=bFKbwGb9I3uWMKVf" height="200px" controls></video>
+
+    <!-- The <video> Tag
+        The <video> tag is used to embed video files in an HTML document. It supports multiple attributes to control the video playback. -->
+
+    <!-- Attributes for <video> Tag
+                src: Specifies the path to the video file.
+                controls: Adds video controls, like play, pause, and volume.
+                autoplay: Automatically starts playing the video when the page loads.
+                loop: Repeats the video once it ends.
+                muted: Mutes the video by default.
+                poster: Specifies an image to be displayed before the video starts playing.
+                width and height: Specifies the dimensions of the video. -->
+
+    <audio src="add the source of audio" controls></audio>
+
+    <!-- The <audio> Tag
+                    The <audio> tag is used to embed audio files in an HTML document. It also supports multiple attributes for control. -->
+
+    <!-- Attributes for <audio> Tag
+                            src: Specifies the path to the audio file.
+                            controls: Adds audio controls, like play, pause, and volume.
+                            autoplay: Automatically starts playing the audio when the page loads.
+                            loop: Repeats the audio once it ends.
+                            muted: Mutes the audio by default.(in case of multiple audio) -->
+    <!-- preload: Specifies if and how the audio should be loaded when the page loads ('auto', 'metadata', 'none') -->
+
+    <!-- The "preload" attribute can have the following values:
+                            none: This is the default value. It indicates that the browser should not preload the audio file at all. The audio file will only start downloading when the user initiates playback.
+                            metadata: This value tells the browser to preload only the metadata of the audio file, such as its duration and basic information about the audio. This can be useful if you want to display the audio duration to the user without fully loading the audio data.
+                            auto: This value instructs the browser to preload the entire audio file as much as possible without delaying the loading of other important page content. The browser will try to load the audio file in the background so that it's ready to play when the user decides to start it. -->
+    <img src="img.svg" alt="My svg image">
+    <!-- to show image by svg we need to add name space declaration -->
+
+    <!-- I FRAME -->
+
+<iframe src="https://www.codewithharry.com/tutorial/html-iframes/" width="500px" height="500px" frameborder="0"></iframe>
+
+<!-- iFrames in HTML
+iFrames, or Inline Frames, are an integral part of modern web development. They allow you to embed another HTML page within your current page. In this blog, we'll delve into the utility of iFrames, their attributes, and some use-cases. -->
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MYPVQccHhAQ?si=CnOp49D1GZfbfRYh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QbJBDABNKxY?si=Tj8FguYWPWxj3pzg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+<iframe src="https://maps.google.com/maps?q=LOCATION&output=embed" frameborder="0"></iframe>
+
+<!-- create a webiste which shows videos and audios of different category , you can use you tube iframe embedded feature  -->
+
+</html>

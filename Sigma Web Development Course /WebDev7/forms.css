@@ -1,0 +1,18 @@
+input{
+    width: 250px;
+    padding: 5px;
+    margin: 20px;
+    box-shadow: 4px 8px 15px palevioletred;
+    border-radius: 8px;
+}
+
+.pass{
+    box-shadow: 4px 8px 30px orangered;
+}
+
+.file{
+
+    box-shadow:4px 8px 30px violet;
+    
+   
+}

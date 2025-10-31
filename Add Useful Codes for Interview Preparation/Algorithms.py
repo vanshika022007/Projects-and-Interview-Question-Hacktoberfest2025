@@ -423,3 +423,4 @@ def prim(graph, start):
                     heapq.heappush(edges, (w, v, to_next))
     return mst
 
+# Doc: clarified factorial usage example for interview prep.

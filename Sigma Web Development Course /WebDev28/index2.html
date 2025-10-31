@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions</title>
+    <style>
+        .box{
+            height: 200px;
+            width: 80vh;
+            border: 2px solid black;
+            border-radius: 20px;
+            outline: 5px solid gold;
+        }
+        .box1{
+            background-color: darkorange;
+            position: fixed;
+            bottom: 0px;
+            left: 25vw;
+        }
+        .box2{
+            background-color: rgb(0, 255, 208);
+            position: sticky;
+            top: 0px;
+            width: 90vw;
+
+        }
+        .box3{
+            background-color: rgb(162, 144, 234);
+            position: absolute; 
+            /* here absolute position is applied relative to the parent */
+            top: 0px;
+            left: 300px;
+        }
+        .box4{
+            background-color: pink;
+        }
+        .box5{
+            background-color: rgb(167, 166, 167);
+        
+        }
+        .box6{
+            background-color: rgb(220, 248, 164);
+        }
+        .box7{
+            background-color: rgb(0, 0, 0);
+        }
+        .parent{
+            position: absolute;
+
+            /* Exception!! */
+            /* transform: translate(0px); */
+            /* position:relative; */
+            /* filter: invert(0) */
+            /* when the transform , filter or prespective properties are applied box will align themselves relative to the parent , even if no position is specified */ 
+            /* can be asked in interviews */
+            /* perspective: 0em; */
+
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Fixed and Sticky Positions !!</h1>
+    <ul>
+        <li>Fixed Position</li>
+    </ul>
+    <p>Applied in box 1 - An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+
+    </p>
+    <ul>
+        <li>Sticky Position !!</li>
+    </ul>
+    <p>In CSS, position: sticky is a type of positioning that allows an element to "stick" to a specified position within its parent container when you scroll past it. The element remains in its normal flow until it reaches the specified scroll position, after which it behaves like a fixed element, sticking to that position until the parent container is out of view.</p>
+    <ul>
+        <li>transform , filter or prespective properties can also make an elemet appear as positioned</li>
+    </ul>
+    <div class="parent">
+        <div class="box box1">I am FIXED!!</div>
+        <div class="box box2">I am STICKY!!</div>
+        <div class="box box3">Absolute Position</div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+        <div class="box box6"></div>
+        <div class="box box7"></div>
+    </div>
+</body>
+</html>

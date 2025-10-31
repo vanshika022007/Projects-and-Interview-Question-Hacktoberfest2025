@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Float and Clear Concept</title>
+    <style>
+      .card {
+        border: 2px solid palevioletred;
+      }
+      .cards {
+        border: 2px solid black;
+        display: flow-root;
+        /* check difference by commenting and uncommenting above property */
+      }
+      img {
+        /* float: left; */
+        float: right;
+      }
+
+      .card:nth-child(2){
+            clear:right;
+            background-color: pink;
+            /* now 2th child does not want any element to be in its right position - done by using clear */
+      }
+
+      /* by using float image will float in left side and will alow content in right side */
+    </style>
+  </head>
+  <body>
+    <div class="cards">
+      <img
+        src="https://as1.ftcdn.net/v2/jpg/07/87/32/00/1000_F_787320087_DluiRbYyAiENSobwZxeoTzzZKmNu34oD.jpg"
+        height="300px"
+        width="300px"
+        alt=""
+      />
+      <div class="card">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+          deleniti illo distinctio ipsa magni voluptate accusantium ad unde
+          maiores facere aliquam nostrum necessitatibus beatae quae laudantium
+          assumenda, aut mollitia saepe atque fugit hic. Nobis sapiente error
+          maxime perspiciatis placeat fugiat atque iste ullam quaerat itaque?
+          Aut, quidem tempora eligendi omnis maxime fugiat nihil placeat aperiam
+          molestiae, voluptas impedit odio natus quam rem vero doloremque
+          suscipit officia voluptatum asperiores ipsam mollitia laborum! Vitae
+          ab quae delectus omnis! Eos inventore, sunt accusantium voluptatem
+          nisi nulla dolorum amet vel aliquam tempora consectetur enim quaerat a
+          suscipit eligendi ab veniam, architecto, provident corporis illo quam?
+          Dolor assumenda est maiores dolores voluptates voluptas nostrum ullam
+          praesentium, illum, corrupti aperiam nam sunt dolore cupiditate, eum
+          quam totam pariatur enim. Quam itaque consectetur sit, sapiente
+          possimus rerum repudiandae eveniet vitae et hic excepturi repellendus
+          animi ut, cupiditate dolorum quis nobis aut dolore. Deleniti quasi
+          laborum, praesentium quo ea velit tempore quas exercitationem rem
+          incidunt quae error molestias facilis libero accusantium, hic
+          cupiditate dolore. Dolore dolorem voluptatum esse repellat ullam
+          incidunt ea quod reprehenderit in, adipisci laudantium nisi! Voluptate
+          exercitationem adipisci esse cum nemo quos nam, sunt ut reiciendis eos
+          dolor dolores excepturi quam. Quidem ex ipsa adipisci!
+        </p>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus porro, quae magnam omnis eligendi officia quisquam quam tempore odit tenetur numquam, optio commodi. Modi et quod, omnis accusantium aliquam ducimus porro eligendi ut eos, voluptas quidem, saepe quaerat quia fugit impedit eaque. Beatae vitae provident eligendi repellat rem culpa. Et quae sapiente, aspernatur sunt, vitae ullam fugit unde necessitatibus at pariatur consequatur corrupti neque itaque exercitationem consequuntur quibusdam? Minima eveniet, illo impedit quo fuga magnam dolor doloribus accusantium cupiditate, aperiam molestiae dignissimos delectus aliquid animi, corporis placeat provident culpa iusto eum mollitia excepturi nostrum modi dolore? Dolorum in modi ea?</p>
+      </div>
+      <div class="card">Card 2
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga commodi, architecto optio ratione tenetur ad delectus magnam, alias a, perspiciatis ipsum cupiditate similique qui autem vero. Sint sed illo nobis rem molestias voluptatum sit molestiae aliquam doloremque laborum praesentium obcaecati illum quos, expedita nisi accusamus voluptatibus eligendi dolore tenetur. Tenetur voluptatem quibusdam, autem nisi at quia, ipsa nostrum modi dolorem nesciunt aut assumenda nulla hic ea quae labore. Earum ut quia neque delectus, totam aliquid optio harum sed obcaecati ab sequi nihil possimus, iusto ducimus pariatur eveniet facilis ex placeat nesciunt tempora cum doloremque ullam nostrum maxime? Quas beatae nesciunt repudiandae laudantium autem consectetur corporis aperiam at dolorem, perferendis velit dolore nostrum officia cumque harum! Id cum necessitatibus, nihil itaque, mollitia possimus quia quos eum unde ea omnis molestias molestiae officia quo nam illum ut pariatur praesentium corporis autem laborum dolorem? Nesciunt repudiandae vero veniam impedit accusamus nemo, animi rem sequi perspiciatis consectetur repellendus, quod quia eaque ipsa? Voluptatibus officiis sapiente, minima suscipit vel nisi quam praesentium delectus est ab nobis repellat veritatis dolores nam accusamus ipsam. Deleniti sint fuga voluptates id ratione, maxime, possimus, non facilis sed quae consequuntur quia facere! Praesentium veniam beatae inventore molestiae, commodi saepe cupiditate iusto asperiores, earum quo animi repellat! Pariatur adipisci asperiores assumenda eum? Perferendis incidunt dolore amet distinctio unde dolor fugit saepe eos quos in debitis sit vero quo pariatur vel, ullam dolorem. Sint in obcaecati dignissimos perspiciatis vel deserunt deleniti maxime saepe minima excepturi. Ratione expedita sit totam eveniet, nihil explicabo tempora quos soluta maiores. Dolorem ipsam alias aperiam aut labore, ea pariatur ipsa quidem, rerum laboriosam quod accusamus adipisci repellendus tempore doloribus consequatur exercitationem nulla ipsum fugit maxime! Perspiciatis corrupti magnam autem iste excepturi! Modi iusto unde ducimus. Vitae dolores porro praesentium debitis saepe, quas sit commodi nemo repellat dolore.</p>
+      </div>
+      <div class="card">Card 3</div>
+    </div>
+  </body>
+</html>

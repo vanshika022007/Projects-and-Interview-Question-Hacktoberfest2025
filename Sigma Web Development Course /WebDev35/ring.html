@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ring Design</title>
+    <style>
+      .dis-flex {
+        display: flex;
+      }
+      .justify-center {
+        justify-content: center;
+      }
+      .align-center {
+        align-items: center;
+      }
+      .rounded-50 {
+        border-radius: 50%;
+      }
+      .outer {
+        height: 400px;
+        width: 400px;
+        background-color: greenyellow;
+      }
+      .inner {
+        height: 300px;
+        width: 300px;
+        background-color: crimson;
+      }
+      .inner1 {
+        height: 200px;
+        width: 200px;
+        background-color: burlywood;
+      }
+      .inner2 {
+        height: 100px;
+        width: 100px;
+        background-color: purple;
+      }
+      .inner3 {
+        height: 50px;
+        width: 50px;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div  class="outer rounded-50 dis-flex justify-center align-center">
+      <div class="inner rounded-50 dis-flex justify-center align-center">
+        <div class="inner1 rounded-50 dis-flex justify-center align-center">
+          <div class="inner2 rounded-50 dis-flex justify-center align-center">
+            <div class="inner3 rounded-50"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

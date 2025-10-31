@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Save Earth 🌍</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* 🌊 Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #e8f3fc;
+      color: #0a3d62;
+      overflow-x: hidden;
+    }
+
+    /* 🌍 Navbar Section */
+    header {
+      background-color: #0a3d62;
+      color: white;
+      padding: 1.2rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #60a3d9;
+    }
+
+    /* 🌟 Hero Section */
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+    }
+
+    /* 🌱 Carousel Section */
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 400px;
+      margin: 4rem 0;
+    }
+
+    .carousel img {
+      width: 100%;
+      flex-shrink: 0;
+      transition: transform 1s ease-in-out;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      33% { transform: translateX(-100%); }
+      66% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+
+    .carousel-inner {
+      display: flex;
+      width: 300%;
+      animation: slide 12s infinite;
+    }
+
+    /* 💚 Info Section */
+    .info {
+      text-align: center;
+      padding: 4rem 2rem;
+      background-color: #d6ecff;
+    }
+
+    .info h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .info p {
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.7;
+    }
+
+    /* ✨ Footer */
+    footer {
+      background-color: #0a3d62;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌍 Navbar -->
+  <header>
+    <h1>Save Earth</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🌟 Hero Section -->
+  <section class="hero" id="home">
+    <h2>Protect Our Planet</h2>
+    <p>Every action counts. Together, we can restore the balance of life and protect our blue home for all living beings.</p>
+  </section>
+
+  <!-- 🌱 Carousel Section -->
+  <section class="carousel" id="gallery">
+    <div class="carousel-inner">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80" alt="Earth view">
+      <img src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=1350&q=80" alt="Forest">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1350&q=80" alt="Ocean">
+    </div>
+  </section>
+
+  <!-- 💚 Info Section -->
+  <section class="info" id="about">
+    <h2>Why It Matters</h2>
+    <p>Climate change, pollution, and deforestation are destroying ecosystems and endangering all life on Earth. By conserving resources, planting trees, and supporting sustainability, we can build a greener and safer world for generations to come.</p>
+  </section>
+
+  <!-- ✨ Footer -->
+  <footer>
+    <p>© 2025 Save Earth Initiative | Designed with 💚 by Vanshika Yadav</p>
+  </footer>
+
+</body>
+</html>

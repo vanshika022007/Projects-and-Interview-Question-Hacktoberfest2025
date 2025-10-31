@@ -1,0 +1,222 @@
+<!-- Coffee Shop Landing Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brew Haven ☕ | Coffee Shop</title>
+  <style>
+    /* ========== Global Styles ========== */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4efe9;
+      color: #333;
+    }
+
+    header {
+      background-color: #3e2723;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #ffcc80;
+    }
+
+    /* ========== Hero Section ========== */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') center/cover no-repeat;
+      height: 85vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    .hero button {
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      background-color: #ffcc80;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #ffb74d;
+    }
+
+    /* ========== About Section ========== */
+    .about {
+      padding: 4rem 2rem;
+      text-align: center;
+      background-color: #fff8f0;
+    }
+
+    .about h2 {
+      font-size: 2.2rem;
+      color: #3e2723;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 1.5rem auto;
+      line-height: 1.6;
+    }
+
+    /* ========== Menu Section ========== */
+    .menu {
+      padding: 4rem 2rem;
+      background-color: #f4efe9;
+    }
+
+    .menu h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #3e2723;
+      margin-bottom: 2rem;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .menu-item {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .menu-item h3 {
+      color: #3e2723;
+      margin: 1rem 0 0.5rem;
+    }
+
+    .menu-item p {
+      color: #5d4037;
+      margin-bottom: 1rem;
+    }
+
+    /* ========== Footer Section ========== */
+    footer {
+      background-color: #3e2723;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 0;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: #ffcc80;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- ========== Header ========== -->
+  <header>
+    <h1>Brew Haven ☕</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ========== Hero Section ========== -->
+  <section class="hero" id="home">
+    <h2>Wake Up and Smell the Coffee</h2>
+    <p>Crafted with love, brewed to perfection.</p>
+    <button>Order Now</button>
+  </section>
+
+  <!-- ========== About Section ========== -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>Welcome to <strong>Brew Haven</strong>, where every cup tells a story. We source our beans ethically and roast them to bring out the finest flavors. Whether you're looking for a morning boost or an evening retreat, our cozy cafe has something for everyone.</p>
+  </section>
+
+  <!-- ========== Menu Section ========== -->
+  <section class="menu" id="menu">
+    <h2>Our Signature Drinks</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Espresso">
+        <h3>Espresso</h3>
+        <p>Rich and bold, made from freshly ground beans.</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772" alt="Cappuccino">
+        <h3>Cappuccino</h3>
+        <p>Perfect balance of espresso, steamed milk, and foam.</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="Latte">
+        <h3>Latte</h3>
+        <p>Smooth blend of espresso and creamy milk.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Footer ========== -->
+  <footer>
+    <p>© 2025 Brew Haven | Designed with ❤️ by Vanshika</p>
+  </footer>
+</body>
+</html>
