@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 23, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/api/chat/route.ts"],"sourcesContent":["import { openai } from \"@ai-sdk/openai\";\nimport { frontendTools } from \"@assistant-ui/react-ai-sdk\";\nimport { streamText } from \"ai\";\n\nexport const runtime = \"edge\";\nexport const maxDuration = 30;\n\nexport async function POST(req: Request) {\n  const { messages, system, tools } = await req.json();\n\n  const result = streamText({\n    model: openai(\"gpt-4o\"),\n    messages,\n    // forward system prompt and tools from the frontend\n    toolCallStreaming: true,\n    system,\n    tools: {\n      ...frontendTools(tools),\n    },\n    onError: console.log,\n  });\n\n  return result.toDataStreamResponse();\n}\n"],"names":[],"mappings":";;;;;AAAA;AACA;AACA;;;;AAEO,MAAM,UAAU;AAChB,MAAM,cAAc;AAEpB,eAAe,KAAK,GAAY;IACrC,MAAM,EAAE,QAAQ,EAAE,MAAM,EAAE,KAAK,EAAE,GAAG,MAAM,IAAI,IAAI;IAElD,MAAM,SAAS,CAAA,GAAA,8JAAA,CAAA,aAAU,AAAD,EAAE;QACxB,OAAO,CAAA,GAAA,iKAAA,CAAA,SAAM,AAAD,EAAE;QACd;QACA,oDAAoD;QACpD,mBAAmB;QACnB;QACA,OAAO;YACL,GAAG,CAAA,GAAA,0LAAA,CAAA,gBAAa,AAAD,EAAE,MAAM;QACzB;QACA,SAAS,QAAQ,GAAG;IACtB;IAEA,OAAO,OAAO,oBAAoB;AACpC"}}]
+}
