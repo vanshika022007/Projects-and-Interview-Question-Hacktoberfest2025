@@ -1,0 +1,620 @@
+body{
+    width:100%;
+    overflow: auto;
+    font-family: "Proxima Nova", Arial, sans-serif;
+}
+
+
+/* upper part  */
+
+.upper {
+    width: 100vw; 
+    height: 70vh; 
+    background-size: 120%; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.upper img {
+    width: 100%;
+    height: 100%;
+    object-position: top; 
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap:3px
+}
+.logo p{
+    color:white
+}
+.content{
+    position:absolute;
+    top:0;
+    width:100%;
+}
+.nav{
+    position:absolute;
+    top:0;
+    width:100%;
+}
+.nav ul{
+    list-style:none;
+    display: flex;
+    color:white;
+}
+.nav ul li{
+    padding:10px;
+    margin-right: 60px;
+}
+.nav ul li a{
+    color:white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+}
+.zomato{
+    width:300px;
+}
+.head-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+}
+.head-container p{
+    color:white;
+    font-size: 40px;
+    letter-spacing: 1.5;
+}
+.search{
+    background-color: white;
+    width:800px;
+    height:55px;
+    border-radius: 10px;
+    display:flex;
+    align-items: center;
+}
+.location{
+    display: flex;
+
+}
+.bar{
+    display: flex;
+    gap:10px
+ }
+.bar h1{
+    opacity:0.1;
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+.bar img{
+    opacity: 0.5;
+    margin-top: 34px;
+}
+.location .map{
+    opacity: 0.6;
+    padding-left:3px
+}
+.location .map1{
+    opacity:0.7;
+    margin-top: 2px;
+}
+.location input[type="text"]{
+    width: 200px;
+    border: none;
+}
+.location input:focus{
+    outline:none;
+}
+.location input::placeholder{
+    opacity:0.7;
+}
+
+.input input[type="text"]{
+    width:300px;
+    height:50px;
+    border: none;
+    margin-left: 15px;
+  
+}
+.input input::placeholder{
+    font-size: 15px;
+    opacity: 0.8;
+    letter-spacing:  1.5;
+    padding-top: 5px;
+}
+.input input:focus{
+    outline:none;
+}
+
+/* middle-part */
+
+.middle{
+    display: flex;
+    width:300px;
+    height: 200px;
+    gap: 15px;
+    margin-top: 50px;
+    margin-left: 200px;
+}
+
+.first{
+    border:1px solid rgb(240, 224, 224);
+    border-radius: 10px;
+    height: 260px;
+    transition: all 0.3s ease-in-out;
+
+}
+.first:hover,.second:hover,.third:hover{
+    width:480px;
+    height:280px;
+    border:1px solid rgb(222, 207, 207);
+}
+.first .img{
+    width:350px;
+    height:180px;
+    transition: all 0.3s ease-in-out;
+}
+.first:hover .img,.second:hover .img20,.third:hover .img30{
+    width: 380px; 
+    height: 200px;
+    transition: all 0.3s ease-in;
+}
+
+.first .img img{
+    border-radius: 10px 10px 0 0;
+    object-fit: cover; 
+    transition: transform 0.3s ease-in-out;
+}
+.img img:hover,.img20 img:hover,.img30 img:hover{
+    width:380px;
+    height:200px;
+    transition: all 0.3s ease-in;
+}
+
+.text1,.text2,.text3{
+    padding-top: 10px;
+    padding-left:20px;
+    opacity: 0.8;
+    font-family: "Proxima Nova", Arial, sans-serif;
+    transition: opacity 0.3s ease-in-out;
+}
+.text1 h3,.text2 h3,.text3 h3{
+    font-weight: 200;
+    line-height: 1.5px;
+}
+
+
+.second{
+    border:2px solid lightgray;
+    border-radius: 10px;
+    height: 260px;
+    border:1px solid rgb(253, 235, 235);
+}
+.second .img20{
+    width:350px;
+    height:180px;
+}
+.second .img20 img{
+    border-radius: 10px 10px 0 0;
+    object-fit: cover; 
+}
+
+
+
+.third{
+    border:2px solid lightgrey;
+    border-radius: 10px;
+    height: 260px;
+    border:1px solid rgb(253, 235, 235);
+}
+.third .img30{
+    width:350px;
+    height:180px;
+}
+.third .img30 img{
+    border-radius: 10px 10px 0 0;
+    object-fit: cover; 
+}
+
+
+
+/* third part */
+#h2{
+    margin-top:160px;
+    margin-left:200px;
+    font-size: 35px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1px;
+}
+.para{
+    line-height: 1px;
+    display: flex;
+    gap:110px;
+    margin-right: 100px;
+}
+.para p{
+    margin-left:200px;
+    font-size: 19px;
+    font-weight: 300;
+    letter-spacing:1.5 ;
+    font-family: "Proxima Nova", Arial, sans-serif;
+    color:rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+
+.para h3{
+    color:rgb(234, 79, 79);
+    font-weight: 50;
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-size: 17px;
+}
+
+.images {
+    display: flex;
+    margin-left: 200px;
+    gap: 25px;
+    padding-top: 20px;
+}
+
+.img1, .img2, .img3, .img4 {
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:250px;
+    padding: 5px; 
+}
+
+.img1 img, .img2 img, .img3 img, .img4 img {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    display: block;
+    object-fit: cover;
+    box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.7); /* Stronger inner shadow */
+}
+
+
+.t1, .t2, .t3, .t4 {
+    position: absolute;
+    bottom: -20px;
+    left: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.t1 h3,.t2 h3,.t3 h3,.t4 h3{
+    line-height: 1px;
+    font-size: 20px;
+    font-weight: 100;
+    font-family: "Proxima Nova", Arial, sans-serif;
+   
+}
+
+.t1 p,.t2 p,.t3 p,.t4 p{
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Proxima Nova", Arial, sans-serif;
+    padding:2px
+}
+
+
+/* Mobile part */
+
+
+.mobile-app {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #fff8e1;
+    margin-top: 100px;
+    height:500px;
+    gap:50px
+}
+
+.app-content{
+    margin-bottom: 50px;
+    font-family: "Proxima Nova", Arial, sans-serif;
+    margin-top: 380px;
+}
+.app-content h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 400px;
+    line-height: 1;
+    color:rgb(27, 25, 25);
+}
+
+.app-content p {
+    font-size: 16px;
+    color: #4a4949;
+}
+
+
+
+/* Radio buttons for Email / Phone */
+
+.new{
+    margin-bottom: 400px;
+}
+.radio-options {
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+    
+}
+
+.radio-options input[type="radio"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ff4151; 
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+.radio-options input[type="radio"]:checked::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #d84450;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.radio-options label {
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.radio-options input {
+    margin-right: 5px;
+}
+
+
+/* Input field & button */
+.app-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+.app-input input {
+    width: 257px; 
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    height:30px
+
+}
+
+.app-input button {
+    background-color: #d5414e; 
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width:170px
+}
+
+.app-input button:hover {
+    background-color: #ea1c2a;
+}
+
+
+/* last part */
+#p{
+    margin-top: 30px;
+    font-weight: 300;
+}
+.download-buttons {
+    display: flex;
+    gap: 10px;
+    
+}
+
+.store-button img {
+    width: 150px; 
+    height: auto;
+    margin-top: 10px;
+}
+
+.app-image img {
+    width: 410px;
+    height: auto;
+    padding-left: 200px;
+}
+
+
+
+
+
+.dropdown-section {
+    background-color: #f8f8f8;
+    padding: 30px;
+    text-align: center;
+}
+
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+}
+
+
+.dropbtn {
+    background-color: white;
+    color: #cb202d; 
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #cb202d;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.dropdown-content a:hover {
+    background-color: #f8f8f8;
+}
+
+
+
+/* -------------------FOOTER PART---------------------- */
+
+
+.zomato-footer {
+    background-color: #55505011;
+    padding: 40px;
+    font-family: "Proxima Nova", Arial, sans-serif;
+    text-align: center;
+
+}
+
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 20; */
+}
+
+.logo {
+    width: 150px;
+    margin-left: 200px;
+}
+
+.footer-options button {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 50px;
+}
+
+
+
+.hello{
+    margin-bottom: 200px;
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 130px;
+    flex-wrap: wrap;
+    margin-right: 200px;
+    margin-left: 100px;
+}
+
+.footer-column {
+    text-align: left;
+}
+
+.footer-column h4 {
+    font-size: 20px;
+    color: #2d2d2d;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    display: block;
+    font-size: 18px;
+    color: #666;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.footer-column a:hover {
+    color: #cb202d;
+}
+
+/* Social Media Links */
+.social-links {
+    margin: 20px 0;
+}
+
+.social-links img {
+    width: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+
+.footer-text {
+    font-size: 15px;
+    color: #666;
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-text a {
+    color: #cb202d;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
